@@ -1,0 +1,46 @@
+﻿@model List<CompetidorModel>
+@{
+    ViewData["Title"] = "Competidores";
+}
+
+<div class="div-btns">
+    <div class="div-btn-left">
+        <button type="button" class="btn-start btn btn-primary" disabled>Que comecem as lutas!</button>
+    </div>
+    <div class="div-btn-right">
+        <div id="checkcount"></div>
+        <button type="button" class="btn-clear-all btn btn-primary">Limpar todos</button>
+    </div>
+</div>
+
+<div class="cards">
+    @if (Model != null)
+    {
+        foreach (CompetidorModel item in Model)
+        {
+            <div class="card">
+                <div class="card-header">
+                    <input type="checkbox" />
+                    <label>@item.Nome</label>
+                </div>
+                <ul class="list-group list-group-flush">
+                    @*<li class="list-group-item">Id: @item.Id</li>*@
+                    <li class="list-group-item">Idade: @item.Idade</li>
+                    <li class="list-group-item">Lutas: @item.Lutas</li>
+                    <li class="list-group-item">Derrotas: @item.Derrotas</li>
+                    <li class="list-group-item">Vitórias: @item.Vitorias</li>
+                    <li class="list-group-item">Artes Marciais:
+                        @for (int i = 0; i < item.ArtesMarciais.Length; i++)
+                        {
+                            <ul >
+                                <li>@item.ArtesMarciais[i]</li>
+                            </ul>
+                        }
+                    </li>
+                </ul>
+            </div>
+        }
+    }
+</div>
+
+<a class="btn btn-primary" role="button" asp-controller="Resultado" asp-action="Index">Change page</a>

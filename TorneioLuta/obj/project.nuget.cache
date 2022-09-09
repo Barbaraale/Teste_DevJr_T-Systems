@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "R/ezOBf+SEROEwkPZTrLHmKaqNz00pFTx68JnEhHxjzV0yCq2qBJnhpYhFWEjWJPtO8dtshVCk4JrZy0eNmx1Q==",
+  "dgSpecHash": "s/68BxTB4tmxE1UQNT+HeeL1uFgtEE2KKFWD2IbnI/58tBh1kp4rtRhEzvLe5ZM9cjMHo+pTBm+VXugGVMEXYw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\barba\\Desktop\\TorneioLuta\\TorneioLuta\\TorneioLuta.csproj",
+  "projectFilePath": "C:\\Users\\barba\\Desktop\\Teste_DevJr_T-Systems\\TorneioLuta\\TorneioLuta.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\barba\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\5.0.17\\microsoft.aspnetcore.mvc.razor.extensions.5.0.17.nupkg.sha512",
     "C:\\Users\\barba\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\5.0.17\\microsoft.aspnetcore.mvc.razor.runtimecompilation.5.0.17.nupkg.sha512",

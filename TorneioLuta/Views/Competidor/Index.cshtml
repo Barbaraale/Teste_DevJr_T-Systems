@@ -5,7 +5,9 @@
 
 <div class="div-btns">
     <div class="div-btn-left">
-        <button type="button" class="btn-start btn btn-primary" disabled>Que comecem as lutas!</button>
+        <a asp-controller="Resultado" asp-action="Index">
+            <button type="button" class="btn-start btn btn-primary" disabled>Que comecem as lutas!</button>
+        </a>
     </div>
     <div class="div-btn-right">
         <div id="checkcount"></div>
@@ -24,7 +26,6 @@
                     <label>@item.Nome</label>
                 </div>
                 <ul class="list-group list-group-flush">
-                    @*<li class="list-group-item">Id: @item.Id</li>*@
                     <li class="list-group-item">Idade: @item.Idade</li>
                     <li class="list-group-item">Lutas: @item.Lutas</li>
                     <li class="list-group-item">Derrotas: @item.Derrotas</li>
@@ -43,4 +44,4 @@
     }
 </div>
 
-<a class="btn btn-primary" role="button" asp-controller="Resultado" asp-action="Index">Change page</a>
+<a class="btn btn-primary aa" role="button" asp-controller="Resultado" asp-action="Index">Change page</a>

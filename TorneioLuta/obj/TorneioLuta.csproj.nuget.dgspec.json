@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\barba\\Desktop\\TorneioLuta\\TorneioLuta\\TorneioLuta.csproj": {}
+    "C:\\Users\\barba\\Desktop\\Teste_DevJr_T-Systems\\TorneioLuta\\TorneioLuta.csproj": {}
   },
   "projects": {
-    "C:\\Users\\barba\\Desktop\\TorneioLuta\\TorneioLuta\\TorneioLuta.csproj": {
+    "C:\\Users\\barba\\Desktop\\Teste_DevJr_T-Systems\\TorneioLuta\\TorneioLuta.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\barba\\Desktop\\TorneioLuta\\TorneioLuta\\TorneioLuta.csproj",
+        "projectUniqueName": "C:\\Users\\barba\\Desktop\\Teste_DevJr_T-Systems\\TorneioLuta\\TorneioLuta.csproj",
         "projectName": "TorneioLuta",
-        "projectPath": "C:\\Users\\barba\\Desktop\\TorneioLuta\\TorneioLuta\\TorneioLuta.csproj",
+        "projectPath": "C:\\Users\\barba\\Desktop\\Teste_DevJr_T-Systems\\TorneioLuta\\TorneioLuta.csproj",
         "packagesPath": "C:\\Users\\barba\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\barba\\Desktop\\TorneioLuta\\TorneioLuta\\obj\\",
+        "outputPath": "C:\\Users\\barba\\Desktop\\Teste_DevJr_T-Systems\\TorneioLuta\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

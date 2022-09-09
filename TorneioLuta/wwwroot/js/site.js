@@ -9,6 +9,8 @@ selectionCounter();
 $("input[type=checkbox]").on("click", selectionCounter);
 
 //funcao para habilitar ou desabilitar o botao de iniciar o torneio
+document.querySelector(".btn-start").disabled = true;
+
 var buttonState = function () {
     var checkedValue = $("input:checked").length;
     if (checkedValue == 3)

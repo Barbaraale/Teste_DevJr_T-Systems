@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TorneioLuta.Repositories.Interfaces;
-using TorneioLuta.Repository;
+using TorneioLuta.Repositories;
 
 namespace TorneioLuta
 {

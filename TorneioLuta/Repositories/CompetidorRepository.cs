@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using TorneioLuta.Models;
 using TorneioLuta.Repositories.Interfaces;
 
-namespace TorneioLuta.Repository
+namespace TorneioLuta.Repositories
 {
     public class CompetidorRepository : ICompetidorRepository 
     {

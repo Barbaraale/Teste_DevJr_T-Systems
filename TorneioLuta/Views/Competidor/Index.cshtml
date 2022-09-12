@@ -5,8 +5,8 @@
 
 <div class="div-btns">
     <div class="div-btn-left">
-        <a asp-controller="Resultado" asp-action="Index">
-            <button type="button" class="btn-start btn btn-primary" disabled>Que comecem as lutas!</button>
+        <a asp-controller="Resultado" asp-action="Index" runat="server">
+            <input class="btn-start btn btn-primary" type="submit" value="Que comecem as lutas!" disabled />
         </a>
     </div>
     <div class="div-btn-right">
@@ -16,32 +16,43 @@
 </div>
 
 <div class="cards">
-    @if (Model != null)
-    {
-        foreach (CompetidorModel item in Model)
+    <form asp-controller="Resultado" asp-action="Index" method="post">
+        @foreach (CompetidorModel item in Model)
         {
             <div class="card">
                 <div class="card-header">
-                    <input type="checkbox" />
-                    <label>@item.Nome</label>
+                    <label>
+                        @Html.CheckBox("IsCheck", false)
+                        @item.Nome
+                    </label>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Idade: @item.Idade</li>
                     <li class="list-group-item">Lutas: @item.Lutas</li>
                     <li class="list-group-item">Derrotas: @item.Derrotas</li>
                     <li class="list-group-item">Vitórias: @item.Vitorias</li>
-                    <li class="list-group-item">Artes Marciais:
+                    <li class="list-group-item">
+                        Artes Marciais:
                         @for (int i = 0; i < item.ArtesMarciais.Length; i++)
                         {
-                            <ul >
+                            <ul>
                                 <li>@item.ArtesMarciais[i]</li>
                             </ul>
                         }
                     </li>
+                    @Html.Hidden("Id", item.Id)
+                    @Html.Hidden("Nome", item.Nome)
+                    @Html.Hidden("Idade", item.Idade)
+                    @Html.Hidden("Lutas", item.Lutas)
+                    @Html.Hidden("Derrotas", item.Derrotas)
+                    @Html.Hidden("Vitorias", item.Vitorias)
+                    @Html.Hidden("ArtesMarciais", item.ArtesMarciais)
+                    @Html.Hidden("IsCheck", item.IsCheck == true)
                 </ul>
             </div>
         }
-    }
+        <input type="submit" value="submit" />
+    </form>
 </div>
 
-<a class="btn btn-primary aa" role="button" asp-controller="Resultado" asp-action="Index">Change page</a>
+

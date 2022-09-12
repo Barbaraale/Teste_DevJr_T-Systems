@@ -1,16 +1,8 @@
 ﻿using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace TorneioLuta.Models 
-{
-    //public static class Extensions
-    //{
-    //    public static IEnumerator<T> GetEnumerator<T>(this IEnumerator<T> enumerator) => enumerator;
-    //}
-
+namespace TorneioLuta.Models
+{   
     public class CompetidorModel
     {
         [JsonProperty("id")]
@@ -33,5 +25,9 @@ namespace TorneioLuta.Models
 
         [JsonProperty("vitorias")]
         public int Vitorias { get; set; }
+
+        public bool IsCheck { get; set; }
+
+        public List<CompetidorModel> Competidores { get; set; }
     }
 }

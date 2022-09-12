@@ -27,7 +27,5 @@ namespace TorneioLuta.Models
         public int Vitorias { get; set; }
 
         public bool IsCheck { get; set; }
-
-        public List<CompetidorModel> Competidores { get; set; }
     }
 }

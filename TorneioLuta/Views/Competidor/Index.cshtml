@@ -3,56 +3,58 @@
     ViewData["Title"] = "Competidores";
 }
 
-<div class="div-btns">
-    <div class="div-btn-left">
-        <a asp-controller="Resultado" asp-action="Index" runat="server">
-            <input class="btn-start btn btn-primary" type="submit" value="Que comecem as lutas!" disabled />
-        </a>
-    </div>
-    <div class="div-btn-right">
-        <div id="checkcount"></div>
-        <button type="button" class="btn-clear-all btn btn-primary">Limpar todos</button>
-    </div>
+<div class="logo">
+    <img src="~/imgs/torneio_luta.png" />
 </div>
 
-<div class="cards">
+<div class="teste">
+    <p>Regras do Jogo</p>
+</div>
+
+<div class="competidores">
     <form asp-controller="Resultado" asp-action="Index" method="post">
-        @foreach (CompetidorModel item in Model)
-        {
-            <div class="card">
-                <div class="card-header">
-                    <label>
-                        @Html.CheckBox("IsCheck", false)
-                        @item.Nome
-                    </label>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Idade: @item.Idade</li>
-                    <li class="list-group-item">Lutas: @item.Lutas</li>
-                    <li class="list-group-item">Derrotas: @item.Derrotas</li>
-                    <li class="list-group-item">Vitórias: @item.Vitorias</li>
-                    <li class="list-group-item">
-                        Artes Marciais:
-                        @for (int i = 0; i < item.ArtesMarciais.Length; i++)
-                        {
-                            <ul>
-                                <li>@item.ArtesMarciais[i]</li>
-                            </ul>
-                        }
-                    </li>
-                    @Html.Hidden("Id", item.Id)
-                    @Html.Hidden("Nome", item.Nome)
-                    @Html.Hidden("Idade", item.Idade)
-                    @Html.Hidden("Lutas", item.Lutas)
-                    @Html.Hidden("Derrotas", item.Derrotas)
-                    @Html.Hidden("Vitorias", item.Vitorias)
-                    @Html.Hidden("ArtesMarciais", item.ArtesMarciais)
-                    @Html.Hidden("IsCheck", item.IsCheck == true)
-                </ul>
+        <div class="btns">
+            <div class="div-btn-left">
+                <input class="btn-start btn" type="submit" value="Que comecem as lutas!" disabled />
             </div>
-        }
-        <input type="submit" value="submit" />
+            <div class="div-btn-right">
+                <div id="checkcount"></div>
+                <button type="button" class="btn-clear-all btn">Limpar todos</button>
+            </div>
+        </div>
+        <div class="cards">
+            @foreach (CompetidorModel item in Model)
+            {
+                <div class="card">
+                    <div style="width: 85%; height: 90%">
+                        <div class="header-card">
+                            <label>
+                                @*@Html.CheckBox("IsCheck", false)*@
+                                <input class="input-ckbox" type="checkbox" name="IsCheck" value="false" />
+                                @item.Nome
+                            </label>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><span>Idade: </span>@item.Idade</li>
+                            <li class="list-group-item"><span>Lutas: </span>@item.Lutas</li>
+                            <li class="list-group-item"><span>Derrotas: </span>@item.Derrotas</li>
+                            <li class="list-group-item"><span>Vitorias: </span>@item.Vitorias</li>
+                            <li class="list-group-item"><span>Artes Marciais: </span>@item.ArtesMarciais.Length</li>
+                            @Html.Hidden("Id", item.Id)
+                            @Html.Hidden("Nome", item.Nome)
+                            @Html.Hidden("Idade", item.Idade)
+                            @Html.Hidden("Lutas", item.Lutas)
+                            @Html.Hidden("Derrotas", item.Derrotas)
+                            @Html.Hidden("Vitorias", item.Vitorias)
+                            @Html.Hidden("ArtesMarciais", item.ArtesMarciais)
+                            @Html.Hidden("IsCheck", item.IsCheck == true)
+                        </ul>
+                    </div>
+                </div>
+            }
+        </div>
     </form>
 </div>
+
 
 

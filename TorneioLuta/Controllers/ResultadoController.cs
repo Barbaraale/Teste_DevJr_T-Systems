@@ -17,8 +17,9 @@ namespace TorneioLuta.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Index(List<CompetidorModel> competidores, CompetidorModel competidor, bool isCheck)
+        public async Task<IActionResult> Index(CompetidorModel competidor, bool isCheck)
         {
+            List<CompetidorModel> competidores = new List<CompetidorModel>();
             var json = await _competidorRepository.GetAll();
             StringBuilder sb = new StringBuilder();
 

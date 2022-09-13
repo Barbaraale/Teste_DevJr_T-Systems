@@ -1,4 +1,5 @@
-﻿@font-face {
+﻿/*------ Geral ------*/
+@font-face {
     font-family: Barlow;
     src: url(../fonts/barlow-condensed.medium.ttf);
 }
@@ -17,7 +18,6 @@ body{
 
 main {
     align-items: center;
-    /*background-color: lightcoral;*/
     display: flex;
     flex-direction: column;
     width: 100%;

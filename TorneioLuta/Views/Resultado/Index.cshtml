@@ -2,4 +2,31 @@
     ViewData["Title"] = "Resultado";
 }
 
-<p>@ViewBag.selectCompetidor</p>
+<div class="banner">
+    <div class="logo-resultado">
+        <img src="~/imgs/logo.png" />
+    </div>
+    <div class="mode-dark">
+        <button class="btn-dark btn btn-outline-light">Dark Mode</button>
+    </div>
+</div>
+
+<div class="a">
+    <h1 class="title">Resultado</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Campeão</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Nome: @ViewBag.selectCompetidor</th>
+            </tr>
+        </tbody>
+    </table>
+    <img src="~/imgs/vencedor.png" />
+    <a class="btn-back btn" asp-controller="Competidor" asp-action="Index">Jogar novamente</a>
+</div>
+
+

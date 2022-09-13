@@ -1,0 +1,143 @@
+﻿/*------ Index - Competidores ------*/
+.btn-dark-mode {
+    border-radius: 0;
+    height: 40px;
+    margin-top: 69px;
+}
+
+.regra-jogo {
+    background-color: #000;
+    width: 100%;
+}
+
+.regra-jogo p {
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+}
+
+.competidores {
+    width: 100%;
+}
+
+form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.btns {
+    align-items: center;
+    background-color: #000;
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    padding: 0px 210px 0px 210px;
+    width: 100%;
+}
+
+.div-btn-right {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 310px;
+}
+
+.btn-start {
+    background-color: #ff0008;
+    border-radius: 0;
+    color: #fff;
+    font-size: 17px;
+    height: 50px;
+    width: 200px;
+}
+
+.btn-clear-all {
+    background-color: #ff0008;
+    border-radius: 0;
+    color: #fff;
+    font-size: 17px;
+    height: 40px;
+    width: 120px;
+}
+
+.btn-start:hover {
+    color: #fff;
+    box-shadow: none;
+}
+
+.btn-clear-all:hover {
+    color: #fff;
+    box-shadow: none;
+    border-bottom: 2px solid #fff;
+}
+
+#checkcount {
+    color: #fff;
+    font-size: 15px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1100px;
+}
+
+.card {
+    align-items: center;
+    border-radius: 0;
+    box-shadow: 2px 3px #f0f0f0;
+    display: flex;
+    height: 197px;
+    justify-content: center;
+    margin-bottom: 25px;
+    width: 250px;
+}
+
+.card:hover {
+    box-shadow: 2px 3px #bcbcbc;
+}
+
+.header-card {
+    height: 35px;
+    padding: 5px;
+}
+
+label {
+    color: #ff343c;
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+}
+
+label p{
+    margin: 0px 0px 0px 10px;
+}
+
+.list-group-item {
+    border: none;
+    color: #494b51;
+    font-size: 15px;
+    padding: 3px;
+}
+
+span {
+    font-weight: bold;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-end;
+    width: 730px; 
+}
+
+.dark-mode {
+    display: flex;
+    justify-content: flex-end;
+    width: 370px;
+}

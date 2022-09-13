@@ -3,19 +3,26 @@
     ViewData["Title"] = "Competidores";
 }
 
-<div class="logo">
-    <img src="~/imgs/torneio_luta.png" />
+<div class="banner">
+    <div class="logo">
+        <img src="~/imgs/logo.png" />
+    </div>
+    <div class="dark-mode">
+        <button class="btn-dark-mode btn btn-outline-light">Dark Mode</button>
+    </div>
 </div>
 
-<div class="teste">
-    <p>Regras do Jogo</p>
+<div class="regra-jogo">
+    <p>A REGRA É CLARA!</p>
+    <p>Selecione 16 lutadores para liberar o botão de iniciar o torneio</p>
+    <p>E veja quem será o <span style="color: #f7b551">VENCEDOR</span></p>
 </div>
 
 <div class="competidores">
     <form asp-controller="Resultado" asp-action="Index" method="post">
         <div class="btns">
             <div class="div-btn-left">
-                <input class="btn-start btn" type="submit" value="Que comecem as lutas!" disabled />
+                <button type="submit" class="btn-start btn" disabled>Que comecem as lutas!</button>
             </div>
             <div class="div-btn-right">
                 <div id="checkcount"></div>
@@ -29,9 +36,8 @@
                     <div style="width: 85%; height: 90%">
                         <div class="header-card">
                             <label>
-                                @*@Html.CheckBox("IsCheck", false)*@
-                                <input class="input-ckbox" type="checkbox" name="IsCheck" value="false" />
-                                @item.Nome
+                                @Html.CheckBox("IsCheck", false)
+                                <p>@item.Nome</p>                         
                             </label>
                         </div>
                         <ul class="list-group list-group-flush">

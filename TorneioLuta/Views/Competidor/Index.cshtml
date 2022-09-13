@@ -12,7 +12,7 @@
     </div>
 </div>
 
-<div class="regra-jogo">
+<div class="game-rule">
     <p>A REGRA É CLARA!</p>
     <p>Selecione 16 lutadores para liberar o botão de iniciar o torneio</p>
     <p>E veja quem será o <span style="color: #f7b551">VENCEDOR</span></p>
@@ -35,9 +35,10 @@
                 <div class="card">
                     <div style="width: 85%; height: 90%">
                         <div class="header-card">
+                            @Html.CheckBox("IsCheck", false)
                             <label>
-                                @Html.CheckBox("IsCheck", false)
-                                <p>@item.Nome</p>                         
+                                
+                                @item.Nome                         
                             </label>
                         </div>
                         <ul class="list-group list-group-flush">

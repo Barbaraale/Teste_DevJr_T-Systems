@@ -30,7 +30,7 @@ namespace TorneioLuta.Controllers
                     if (competidor.Id == item.Id)
                     {
                         competidores.Add(competidor);
-                        sb.Append(item.Nome);
+                        sb.Append(item.Nome); //testando
                     }
                 }
             }

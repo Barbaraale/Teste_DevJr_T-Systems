@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using TorneioLuta.Models;
 using TorneioLuta.Repositories.Interfaces;
 
@@ -19,7 +17,13 @@ namespace TorneioLuta.Controllers
         [HttpPost]
         public IActionResult Index(List<CompetidorModel> competidores)
         {
-            ViewBag.selectCompetidor = _resultadoRepository.GetWinner(competidores);
+            var competidoresSelecionados = _resultadoRepository.GetSelected(competidores);
+            var listOitavas = _resultadoRepository.Duels(competidoresSelecionados, 16);
+            var listQuartas = _resultadoRepository.Duels(listOitavas, 8);
+            var listSemi = _resultadoRepository.Duels(listQuartas, 4);
+            var final = _resultadoRepository.GetWinner(listSemi);
+
+            ViewBag.selectCompetidor = final;
             return View();
         }
     }

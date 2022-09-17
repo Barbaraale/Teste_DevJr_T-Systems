@@ -8,6 +8,10 @@ namespace TorneioLuta.Repositories.Interfaces
 {
     public interface IResultadoRepository
     {
-        string GetWinner(List<CompetidorModel> competidores);
+        List<CompetidorModel> GetSelected(List<CompetidorModel> competidores);
+
+        List<CompetidorModel> Duels(List<CompetidorModel> competidores, int numberCompetidores);
+
+        string GetWinner(List<CompetidorModel> finalists);
     }
 }

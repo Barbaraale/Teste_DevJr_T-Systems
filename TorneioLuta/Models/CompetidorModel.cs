@@ -25,6 +25,8 @@ namespace TorneioLuta.Models
         [JsonProperty("vitorias")]
         public int Vitorias { get; set; }
 
+        public int Porcentagem { get; set; }
+
         public bool IsCheck { get; set; }
     }
 }

@@ -102,6 +102,11 @@ form {
     box-shadow: 2px 3px #bcbcbc;
 }
 
+.card-content {
+    height: 90%;
+    width: 85%;
+}
+
 .header-card {
     display: flex;
     height: 35px;

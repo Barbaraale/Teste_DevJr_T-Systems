@@ -17,7 +17,7 @@
     width: 370px;
 }
 
-.a {
+.result {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -65,7 +65,7 @@ tbody tr th {
     padding-left: 20px;
 }
 
-.a img {
+.result img {
     margin: 70px 0px 0px 450px;
     position: relative;
     width: 200px;

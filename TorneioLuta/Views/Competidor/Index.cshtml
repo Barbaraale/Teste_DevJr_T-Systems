@@ -30,34 +30,32 @@
             </div>
         </div>
         <div class="cards">
-            @foreach (CompetidorModel item in Model)
+            @for (int i = 0; i < Model.Count; i++)
             {
                 <div class="card">
-                    <div style="width: 85%; height: 90%">
+                    <div class="card-content">
                         <div class="header-card">
-                            @Html.CheckBox("IsCheck", false)
+                            <input type="checkbox" name="competidores[@i].IsCheck" id="@Model[i].Id" onclick="checkFighter(@Model[i].Id);" />
+                            <input type="hidden" name="competidores[@i].Id" value="@Model[i].Id" />
+                            <input type="hidden" name="competidores[@i].Nome" value="@Model[i].Nome" />
+                            <input type="hidden" name="competidores[@i].Idade" value="@Model[i].Idade" />
+                            <input type="hidden" name="competidores[@i].Lutas" value="@Model[i].Lutas" />
+                            <input type="hidden" name="competidores[@i].Derrotas" value="@Model[i].Derrotas" />
+                            <input type="hidden" name="competidores[@i].Vitorias" value="@Model[i].Vitorias" />
+                            <input type="hidden" name="competidores[@i].ArtesMarciais" value="@Model[i].ArtesMarciais" />
                             <label>
-                                
-                                @item.Nome                         
+                                @Model[i].Nome
                             </label>
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><span>Idade: </span>@item.Idade</li>
-                            <li class="list-group-item"><span>Lutas: </span>@item.Lutas</li>
-                            <li class="list-group-item"><span>Derrotas: </span>@item.Derrotas</li>
-                            <li class="list-group-item"><span>Vitorias: </span>@item.Vitorias</li>
-                            <li class="list-group-item"><span>Artes Marciais: </span>@item.ArtesMarciais.Length</li>
-                            @Html.Hidden("Id", item.Id)
-                            @Html.Hidden("Nome", item.Nome)
-                            @Html.Hidden("Idade", item.Idade)
-                            @Html.Hidden("Lutas", item.Lutas)
-                            @Html.Hidden("Derrotas", item.Derrotas)
-                            @Html.Hidden("Vitorias", item.Vitorias)
-                            @Html.Hidden("ArtesMarciais", item.ArtesMarciais)
-                            @Html.Hidden("IsCheck", item.IsCheck == true)
+                            <li class="list-group-item"><span>Idade: </span>@Model[i].Idade</li>
+                            <li class="list-group-item"><span>Lutas: </span>@Model[i].Lutas</li>
+                            <li class="list-group-item"><span>Derrotas: </span>@Model[i].Derrotas</li>
+                            <li class="list-group-item"><span>Vitorias: </span>@Model[i].Vitorias</li>
+                            <li class="list-group-item"><span>Artes Marciais: </span>@Model[i].ArtesMarciais.Length</li>
                         </ul>
                     </div>
-                </div>
+                </div>            
             }
         </div>
     </form>

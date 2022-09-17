@@ -27,6 +27,7 @@ namespace TorneioLuta
         {
             services.AddControllersWithViews();
             services.AddScoped<ICompetidorRepository, CompetidorRepository>();
+            services.AddScoped<IResultadoRepository, ResultadoRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

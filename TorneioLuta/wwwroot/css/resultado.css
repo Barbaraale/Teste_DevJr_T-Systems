@@ -1,20 +1,32 @@
 ﻿/*------ Index - Resultado ------*/
+.banner-resultado {
+    background-color: #000;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .logo-resultado {
     display: flex;
     justify-content: flex-start;
-    width: 730px;
+    padding-left: 210px;
 }
 
-.btn-dark {
-    border-radius: 0;
-    height: 40px;
-    margin-top: 69px;
+.logo-resultado img {
+    height: 220px;
+    width: 380px;
 }
 
-.mode-dark {
+.dark-mode-resultado {
+    align-items: center;
     display: flex;
     justify-content: flex-end;
-    width: 370px;
+    padding-right: 210px;
+}
+
+.btn-dark-mode-resultado {
+    border-radius: 0;
+    height: 40px;
 }
 
 .result {

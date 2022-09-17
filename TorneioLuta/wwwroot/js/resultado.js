@@ -15,4 +15,4 @@ var modeDark = function () {
         }
     )
 }
-$(".btn-dark").on("click", modeDark);
+$(".btn-dark-mode-resultado").on("click", modeDark);

@@ -1,12 +1,26 @@
 ﻿/*------ Index - Competidores ------*/
-.btn-dark-mode {
-    border-radius: 0;
-    height: 40px;
-    margin-top: 69px;
+.banner {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    padding-top: 38px;
+    width: 100%;
+}
+
+.banner img {
+    height: 220px;
+    width: 380px;
+}
+
+.rule-btn {
+    background-color: #000;
+    height: 120px;
+    margin-bottom: 25px;
+    width: 100%;
 }
 
 .game-rule {
-    background-color: #000;
+    position: absolute;
     width: 100%;
 }
 
@@ -15,6 +29,19 @@
     font-size: 20px;
     text-align: center;
     margin: 0;
+}
+
+.dark-mode {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 210px;
+    position: relative;
+}
+
+.dark-mode button {
+    border-radius: 0;
+    height: 40px;
+    margin-top: 50px;
 }
 
 .competidores {
@@ -32,7 +59,7 @@ form {
     align-items: center;
     background-color: #000;
     display: flex;
-    height: 80px;
+    height: 85px;
     justify-content: space-between;
     margin-bottom: 25px;
     padding: 0px 210px 0px 210px;
@@ -113,7 +140,7 @@ form {
     padding: 5px;
 }
 
-label {
+.header-card label {
     color: #ff343c;
     font-size: 17px;
     font-weight: bold;
@@ -128,18 +155,13 @@ label {
     padding: 3px;
 }
 
-span {
+.list-group-item span {
     font-weight: bold;
 }
 
-.logo {
+/*.logo {
     display: flex;
     justify-content: flex-end;
-    width: 730px; 
-}
+    width: 100%; 
+}*/
 
-.dark-mode {
-    display: flex;
-    justify-content: flex-end;
-    width: 370px;
-}

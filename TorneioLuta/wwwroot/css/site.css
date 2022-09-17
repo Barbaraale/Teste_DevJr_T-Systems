@@ -23,16 +23,6 @@ main {
     width: 100%;
 }
 
-.banner {
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
 
-.banner img {
-    height: 220px;
-    width: 380px;
-}
 
 

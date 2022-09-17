@@ -18,9 +18,9 @@ namespace TorneioLuta.Controllers
         public IActionResult Index(List<CompetidorModel> competidores)
         {
             var competidoresSelecionados = _resultadoRepository.GetSelected(competidores);
-            var listOitavas = _resultadoRepository.Duels(competidoresSelecionados, 16);
-            var listQuartas = _resultadoRepository.Duels(listOitavas, 8);
-            var listSemi = _resultadoRepository.Duels(listQuartas, 4);
+            var listOitavas = _resultadoRepository.Duels(competidoresSelecionados, competidoresSelecionados.Count);
+            var listQuartas = _resultadoRepository.Duels(listOitavas, listOitavas.Count);
+            var listSemi = _resultadoRepository.Duels(listQuartas, listQuartas.Count);
             var final = _resultadoRepository.GetWinner(listSemi);
 
             ViewBag.selectCompetidor = final;

@@ -58,6 +58,7 @@ var darkMode = function () {
 $(".btn-dark-mode").on("click", darkMode);
 
 
+
 //funcao para verificar se o competidor foi selecionado
 function checkFighter(id) {
     var checkedItem = $(`#${id}`);

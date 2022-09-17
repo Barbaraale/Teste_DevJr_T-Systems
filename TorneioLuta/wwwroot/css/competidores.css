@@ -135,16 +135,25 @@ form {
 }
 
 .header-card {
+    align-items: center;
     display: flex;
     height: 35px;
     padding: 5px;
+}
+
+.ck-box {
+    cursor: pointer;
+    height: 17px;
+    width: 17px;
 }
 
 .header-card label {
     color: #ff343c;
     font-size: 17px;
     font-weight: bold;
-    margin-left: 10px;
+    margin: 0;
+    padding-left: 10px;
+    padding-bottom: 2px;
     width: 100%;
 }
 
@@ -159,9 +168,4 @@ form {
     font-weight: bold;
 }
 
-/*.logo {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%; 
-}*/
 

@@ -38,6 +38,7 @@ $("input[type=checkbox]").on("click", buttonState);
 //funcao para limpar todos os checkboxs selecionados
 var clearAll = function () {
     var inputs = $("input[type=checkbox]");
+    inputs.val('false');
     inputs.prop('checked', false);
 
     $("#checkcount").text("Competidores selecionados: 0");
